@@ -56,6 +56,9 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-6">
+      <div className="bg-background text-text text-xl">
+        Welcome to WebACU!
+      </div>
       <h1 className="text-2xl font-bold mb-6">Book an Appointment</h1>
 
       <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-md">
@@ -128,7 +131,7 @@ export default function Home() {
         {/* Submit */}
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+          className="w-full bg-blue-600 hover:bg-blue-500 text-white py-2 rounded-lg transition"
           disabled={loading}
         >
           {loading ? 'Submitting...' : 'Submit Request'}
@@ -138,6 +141,8 @@ export default function Home() {
         {success && <p className="text-green-600 text-sm">Request submitted!</p>}
         {errorMsg && <p className="text-red-600 text-sm">{errorMsg}</p>}
       </form>
+     
     </main>
+    
   )
 }

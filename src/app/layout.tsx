@@ -27,7 +27,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <html lang="en">
+  <body className="flex flex-col min-h-screen">
+    <main className="flex-grow">
+      {children}
+    </main>
+    <footer className="w-full text-center text-sm text-gray-500 py-6">
+      <p>Made with ❤️ by Alice Kim, daughter of Koen Woo Kim, L.Ac.</p>
+      <p>Thank you for supporting a family business!</p>
+    </footer>
+  </body>
+</html>
+
       </body>
     </html>
   );
